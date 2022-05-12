@@ -1,3 +1,12 @@
+<?php
+require_once "includes/header.php";
+?>
+<?php
+if (!$session->is_signed_in()) {
+    redirect("login.php");
+}
+?>
+
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -8,7 +17,7 @@
 </nav>
 
 <div id="page-wrapper">
-<?php  include "includes/admin_content.php"; ?>
+    <?php include "includes/admin_content.php"; ?>
     <!-- /.container-fluid -->
 
 </div>

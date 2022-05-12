@@ -5,39 +5,27 @@
         <div class="col-lg-12">
             <h1 class="page-header">
                 Admin
-                <small>Subheading</small>
+                <small>
+                    Subheading
+                </small>
             </h1>
             <?php
 
 
-            // $result_set = User::find_all_users();
-            // while ($row = mysqli_fetch_array($result_set)) {
-            //     echo $row['username'] . "<br>";
-            // }
+            $user = new User();
 
-            // $found_user = User::find_user_by_id(3);
-            // $user = User::instantiation($found_user);
-            // echo $user->username;
-            
-                // $users = User::find_all_users();
-                // foreach ($users as $user) {
-                //     echo $user->last_name."<br>";
-                //     // echo "<br>";
-                // } 
-                $found_user = User::find_user_by_id(3);
-                echo $found_user->username;
+            $user->username = "exampleUserName";
+            $user->password = "examplePassword";
+            $user->first_name = "exampleFirstName";
+            $user->last_name = "exampleLastName";
 
+            $user->create();
 
-
-
-
-
-                
 
             ?>
             <ol class="breadcrumb">
                 <li>
-                    <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
+                    <i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a>
                 </li>
                 <li class="active">
                     <i class="fa fa-file"></i> Blank Page
@@ -45,6 +33,4 @@
             </ol>
         </div>
     </div>
-    <!-- /.row -->
-
 </div>
